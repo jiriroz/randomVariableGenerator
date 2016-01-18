@@ -191,6 +191,6 @@ def monteCarloTrivar(func, n=100, **args):
 
 if __name__ == "__main__":
     gen = RVGenerator()
-    monteCarlo(gen.normal, n=10000)
+    monteCarlo(gen.normal, n=10000, mu=5.0, sigma2=0.7)
     monteCarloBivar(gen.bivar_normal, mu1=0, mu2=5, var1=0.5, var2=10, cov=0.9, n=10000)
     monteCarloTrivar(gen.multivar_normal, n=1000, mu=[0,0,0], cov=[[1,0.8,0.5],[0.8,1,0],[0.5,0,1]])
